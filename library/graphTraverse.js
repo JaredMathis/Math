@@ -9,12 +9,14 @@ module.exports = graphTraverse;
 function graphTraverse(graph) {
     let result;
     u.scope(graphTraverse.name, x => {
-        let log = false;
+        let log = true;
         if (log) console.log(graphTraverse.name + " entered");
         u.merge(x,{graph});
         u.assert(() => isGraph(graph));
 
         let vertices = getGraphVertices(graph);
+
+        let choices = [0,1];
 
         let previous;
         let current = vertices[0];
@@ -29,18 +31,28 @@ function graphTraverse(graph) {
             if (neighbors.length >= 2) {
                 let previousIndex = neighbors.indexOf(previous);
                 if (previousIndex >= 0) {
-                    neighbors.splice(previousIndex, 1);
+                    //neighbors.splice(previousIndex, 1);
                 }
             }
 
-            let choiceIndex = spice % neighbors.length;
-            if (log) console.log({spice,choiceIndex,neighbors,current});
-            if (neighbors.length > 1) {
-                toggle = !toggle;
-                if (toggle) {
-                    spice += neighbors.length - 1;
+            let choiceIndex;
+            if (neighbors.length === 1) {
+                choiceIndex = 0;
+            } else {
+                if (neighbors.length === 2) {
+                    let previousIndex = neighbors.indexOf(previous);
+                    if (previousIndex >= 0) {
+                        neighbors.splice(previousIndex, 1);
+                    }
+                    choiceIndex = 0;
+                } else if (neighbors.length === 3) {
+                    neighbors.sort();
+                    u.assert(false);
+                } else {
+                    u.assert(false);
                 }
             }
+
             previous = current;
             current = neighbors[choiceIndex];
 
