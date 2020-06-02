@@ -7,3 +7,6 @@ module.exports.getGraphVertices = require("./library/getGraphVertices.js");
 module.exports.isGraphConnected = require("./library/isGraphConnected.js");
 module.exports.getGraphNeighbors = require("./library/getGraphNeighbors.js");
 module.exports.graphTraverse = require("./library/graphTraverse.js");
+module.exports.toGraphMinDegree3 = require("./library/toGraphMinDegree3.js");
+module.exports.tryAddGraphEdge = require("./library/tryAddGraphEdge.js");
+module.exports.graphEdgeExists = require("./library/graphEdgeExists.js");

@@ -7,3 +7,6 @@ require("./tests/isGraphConnected/isGraphConnected.js");
 require("./tests/isGraphTree/isGraphTree.js");
 require("./tests/generateGraphTree/generateGraphTree.js");
 //require("./tests/graphTraverse/graphTraverse.js");
+require("./tests/graphEdgeExists/graphEdgeExists.js");
+require("./tests/tryAddGraphEdge/tryAddGraphEdge.js");
+require("./tests/toGraphMinDegree3/toGraphMinDegree3.js");
