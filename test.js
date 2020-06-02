@@ -6,3 +6,4 @@ require("./tests/getGraphNeighbors/getGraphNeighbors.js");
 require("./tests/isGraphConnected/isGraphConnected.js");
 require("./tests/isGraphTree/isGraphTree.js");
 require("./tests/generateGraphTree/generateGraphTree.js");
+require("./tests/graphTraverse/graphTraverse.js");
