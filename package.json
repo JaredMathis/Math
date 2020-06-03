@@ -1,0 +1,27 @@
+{
+  "name": "wlj-math",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "wlj-utilities": "^1.0.59",
+    "biguint-format": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaredMathis/math.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/JaredMathis/math/issues"
+  },
+  "homepage": "https://github.com/JaredMathis/math#readme"
+}
