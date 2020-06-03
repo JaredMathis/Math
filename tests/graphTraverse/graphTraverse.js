@@ -14,7 +14,7 @@ u.scope(__filename, x => {
     test([[1,5],[2,5],[0,5],[0,4],[0,3]]);
 
     let trials = 5;
-    let max = 10;
+    let max = 20;
     let start = 6;
     u.loop(u.range(max - start + 1, start), vertexCount => {
         console.log(__filename, {vertexCount});
