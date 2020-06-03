@@ -10,3 +10,6 @@ require("./tests/generateGraphTree/generateGraphTree.js");
 require("./tests/graphEdgeExists/graphEdgeExists.js");
 require("./tests/tryAddGraphEdge/tryAddGraphEdge.js");
 require("./tests/toGraphMinDegree3/toGraphMinDegree3.js");
+require("./tests/getGraphDegree/getGraphDegree.js");
+require("./tests/toGraphMaxDegree3SingleVertex/toGraphMaxDegree3SingleVertex.js");
+require("./tests/toGraphMaxDegree3/toGraphMaxDegree3.js");

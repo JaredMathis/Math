@@ -10,3 +10,6 @@ module.exports.graphTraverse = require("./library/graphTraverse.js");
 module.exports.toGraphMinDegree3 = require("./library/toGraphMinDegree3.js");
 module.exports.tryAddGraphEdge = require("./library/tryAddGraphEdge.js");
 module.exports.graphEdgeExists = require("./library/graphEdgeExists.js");
+module.exports.toRegular3Graph = require("./library/toRegular3Graph.js");
+module.exports.getGraphDegree = require("./library/getGraphDegree.js");
+module.exports.toRegular3GraphSingleVertex = require("./library/toRegular3GraphSingleVertex.js");
