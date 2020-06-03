@@ -4,6 +4,7 @@ const isGraph = require("./isGraph");
 const getGraphVertices = require("./getGraphVertices");
 const getGraphNeighbors = require("./getGraphNeighbors");
 const tryAddGraphEdge = require("./tryAddGraphEdge");
+const getGraphDegree = require("./getGraphDegree");
 
 module.exports = toGraphMinDegree3;
 
@@ -36,6 +37,11 @@ function toGraphMinDegree3(graph) {
         });
 
         result = graph;
+
+        u.loop(vertices, vertex => {
+            let degree = getGraphDegree(result, vertex);
+            u.assert(() => degree >= 3);
+        });
     });
     return result;
 }

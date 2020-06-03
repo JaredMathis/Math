@@ -13,3 +13,5 @@ module.exports.graphEdgeExists = require("./library/graphEdgeExists.js");
 module.exports.toRegular3Graph = require("./library/toRegular3Graph.js");
 module.exports.getGraphDegree = require("./library/getGraphDegree.js");
 module.exports.toRegular3GraphSingleVertex = require("./library/toRegular3GraphSingleVertex.js");
+module.exports.toRegular3Graph = require("./library/toRegular3Graph.js");
+module.exports.graphTreeTraverse = require("./library/graphTreeTraverse.js");
