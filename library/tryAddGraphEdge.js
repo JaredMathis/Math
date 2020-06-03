@@ -16,7 +16,7 @@ function tryAddGraphEdge(graph, a, b) {
         result = true;
 
         let edge = [a,b];
-        edge.sort();
+        edge.sort((a, b) => a - b);
         if (graphEdgeExists(graph, edge)) {
             result = false;
             return;

@@ -10,7 +10,7 @@ function graphEdgeExists(graph, edge) {
         u.assert(() => isGraph(graph));
         u.assertIsArray(edge);
         u.assert(() => edge.length === 2);
-        edge.sort();
+        edge.sort((a, b) => a - b);
 
         result = false;
         u.loop(graph, e => {

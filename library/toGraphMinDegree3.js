@@ -14,6 +14,8 @@ function toGraphMinDegree3(graph) {
         u.merge(x,{graph})
         u.assert(() => isGraph(graph));
 
+        graph = JSON.parse(JSON.stringify(graph))
+
         let vertices = getGraphVertices(graph);
 
         u.loop(vertices, a => {

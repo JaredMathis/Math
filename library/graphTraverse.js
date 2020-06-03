@@ -46,7 +46,7 @@ function graphTraverse(graph) {
                     }
                     choiceIndex = 0;
                 } else if (neighbors.length === 3) {
-                    neighbors.sort();
+                    neighbors.sort((a, b) => a - b);
                     u.assert(false);
                 } else {
                     u.assert(false);
@@ -61,7 +61,7 @@ function graphTraverse(graph) {
             }
         });
 
-        result.sort();
+        result.sort((a, b) => a - b);
 
         u.assertIsEqualJson(result, vertices);
     });

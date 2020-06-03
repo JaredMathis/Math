@@ -7,6 +7,7 @@ module.exports = getGraphVertices;
 function getGraphVertices(graph) {
     let result;
     u.scope(getGraphVertices.name, x => {
+        let log = false;
         u.assert(() => isGraph(graph));
 
         let vertices = [];
@@ -17,8 +18,10 @@ function getGraphVertices(graph) {
                 }
             });
         });
-        vertices.sort();
         result = vertices;
+        result.sort((a,b) => a-b);
+
+        if (log) console.log(getGraphVertices.name, { result });
     });
     return result;
 }

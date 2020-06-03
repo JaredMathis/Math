@@ -26,7 +26,7 @@ function isGraphConnected(graph) {
             i++;
         }
 
-        found.sort();
+        found.sort((a, b) => a - b);
         result = u.arraySequenceEquals(found, vertices);
     });
     return result;

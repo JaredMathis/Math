@@ -5,33 +5,38 @@ const getGraphDegree = require('./getGraphDegree');
 const toRegular3GraphSingleVertex = require('./toGraphMaxDegree3SingleVertex');
 const isGraph = require('./isGraph');
 
-module.exports = toRegular3Graph;
+module.exports = toGraphMaxDegree3;
 
-function toRegular3Graph(graph) {
+function toGraphMaxDegree3(graph) {
     let result;
-    u.scope(toRegular3Graph.name, x => {
+    u.scope(toGraphMaxDegree3.name, x => {
+        u.merge(x,{graph});
         result = graph;
-        let vertex;
+        let choice;
         while (true) {
-            vertex = null;
+            choice = null;
             let vertices = getGraphVertices(result);
             u.loop(vertices, v => {
-                let degree = getGraphDegree(graph, v);
+                u.merge(x,{v});
+                let degree = getGraphDegree(result, v);
+                u.merge(x,{degree});
                 if (degree > 3) {
-                    vertex = v;
+                    choice = v;
+                    return true;
                 }
             });
-            if (vertex === null) {
+            if (choice === null) {
                 break;
             }
-            result = toRegular3GraphSingleVertex(result, vertex);
+            result = toRegular3GraphSingleVertex(result, choice);
         }
 
         u.assert(() => isGraph(result));
         let resultVertices = getGraphVertices(result);
         u.loop(resultVertices, vertex => {
-            let degree = getGraphDegree(graph, vertex)
-            u.assert(e => degree <= 3);
+            let degree = getGraphDegree(result, vertex)
+            u.merge(x,{degree,vertex});
+            u.assert(() => degree <= 3);
         });
     });
     return result;

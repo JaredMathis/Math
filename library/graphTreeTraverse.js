@@ -22,7 +22,7 @@ function graphTreeTraverse(graph, start) {
         u.loop(u.range(count), () => {
             if (log) console.log(graphTreeTraverse.name, {current,previous});
             let neighbors = getGraphNeighbors(graph, current);
-            neighbors.sort();
+            neighbors.sort((a, b) => a - b);
             if (neighbors.length === 0) {
                 throw 'TODO'
             }
@@ -31,7 +31,7 @@ function graphTreeTraverse(graph, start) {
             if (larger.length === 0) {
                 next = neighbors[0];
             } else {
-                larger.sort();
+                larger.sort((a, b) => a - b);
                 next = larger[0];
             }
             
@@ -43,7 +43,7 @@ function graphTreeTraverse(graph, start) {
             }
         });
 
-        result.sort();
+        result.sort((a, b) => a - b);
     });
     return result;
 }
