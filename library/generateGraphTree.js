@@ -20,14 +20,14 @@ function generateGraphTree(verticesCount) {
         while (remaining.length >= 1) {
             let rIndex = random(0, remaining.length - 1);
             let r = remaining[rIndex];
-            if (log) console.log({'remaining.length':remaining.length,rIndex});
+            if (log) console.log({ 'remaining.length': remaining.length, rIndex });
 
             let pIndex = random(0, processed.length - 1);
             let p = processed[pIndex];
-            if (log) console.log({'processed.length':processed.length,pIndex});
+            if (log) console.log({ 'processed.length': processed.length, pIndex });
 
             let edge = [p, r];
-            edge.sort();
+            edge.sort((a, b) => a - b);
             result.push(edge);
 
             remaining.splice(rIndex, 1);

@@ -13,22 +13,22 @@ u.scope(__filename, x => {
     test([[0,4],[2,4],[2,3],[1,2]]);
     test([[1,5],[2,5],[0,5],[0,4],[0,3]]);
 
-    let trials = 100;
+    let trials = 1;
     let max = 6;
     let start = 4;
     u.loop(u.range(max - start + 1, start), vertexCount => {
         u.loop(u.range(trials), () => {
             let graph = generateGraphTree(vertexCount);
-            let regular = index.toRegular3Graph(graph);
-            test(regular);
+            let minned = index.toGraphMinDegree3(graph);
+            test(minned);
         })
     });
 
     function test(graph) {
         u.merge(x,{graph});
-        let vertices = getGraphVertices(graph);
+        let vertices = index.getGraphVertices(graph);
         u.merge(x,{vertices});
-        let result = graphTreeTraverse(graph, 0);
+        let result = index.graphTraverse(graph, 0);
         u.merge(x,{result});
         u.assertIsEqualJson(() => result, () => vertices);
     }

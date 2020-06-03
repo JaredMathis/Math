@@ -9,6 +9,7 @@ function graphTreeTraverse(graph, start) {
     let result;
     u.scope(graphTreeTraverse.name, x => {
         let log = false;
+        if (log) console.log(graphTreeTraverse.name + ' entered');
         let vertices = getGraphVertices(graph);
         u.assert(() => vertices.includes(start));
 
@@ -19,8 +20,8 @@ function graphTreeTraverse(graph, start) {
         result = [current];
 
         let count = (vertices.length - 1)*2;
-        u.loop(u.range(count), () => {
-            if (log) console.log(graphTreeTraverse.name, {current,previous});
+        u.loop(u.range(count), i => {
+            if (log) console.log(graphTreeTraverse.name, {i,current,previous});
             let neighbors = getGraphNeighbors(graph, current);
             neighbors.sort((a, b) => a - b);
             if (neighbors.length === 0) {
