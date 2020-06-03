@@ -27,7 +27,11 @@ function graphTraverse(graph) {
                     return;
                 }
                 result.push(t);
-            })
+            });
+            // Exit early if possible
+            if (u.arraySequenceEquals(result, vertices)) {
+                return true;
+            }
         });
 
         result.sort((a, b) => a - b);

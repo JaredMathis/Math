@@ -14,3 +14,4 @@ module.exports.toRegular3Graph = require("./library/toRegular3Graph.js");
 module.exports.getGraphDegree = require("./library/getGraphDegree.js");
 module.exports.toGraphMaxDegree3SingleVertex = require("./library/toGraphMaxDegree3SingleVertex.js");
 module.exports.graphTreeTraverse = require("./library/graphTreeTraverse.js");
+module.exports.generateGraph = require("./library/generateGraph.js");

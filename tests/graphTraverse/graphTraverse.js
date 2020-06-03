@@ -13,12 +13,13 @@ u.scope(__filename, x => {
     test([[0,4],[2,4],[2,3],[1,2]]);
     test([[1,5],[2,5],[0,5],[0,4],[0,3]]);
 
-    let trials = 1;
-    let max = 6;
-    let start = 4;
+    let trials = 5;
+    let max = 10;
+    let start = 6;
     u.loop(u.range(max - start + 1, start), vertexCount => {
-        u.loop(u.range(trials), () => {
-            let graph = generateGraphTree(vertexCount);
+        console.log(__filename, {vertexCount});
+        u.loop(u.range(trials), trial => {
+            let graph = index.generateGraph(vertexCount);
             let minned = index.toGraphMinDegree3(graph);
             test(minned);
         })

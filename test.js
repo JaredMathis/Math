@@ -15,4 +15,5 @@ require("./tests/toGraphMaxDegree3/toGraphMaxDegree3.js");
 // TODO: Fix the test
 //require("./tests/toRegular3Graph/toRegular3Graph.js");
 require("./tests/graphTreeTraverse/graphTreeTraverse.js");
-//require("./tests/graphTraverse/graphTraverse.js");
+require("./tests/generateGraph/generateGraph.js");
+require("./tests/graphTraverse/graphTraverse.js");
