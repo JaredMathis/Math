@@ -11,6 +11,7 @@ u.scope(__filename, x => {
     test([[1,3],[0,1],[0,2]]);
     test([[0,3],[0,2],[0,1]]);
     test([[0,4],[2,4],[2,3],[1,2]]);
+    test([[0,1],[1,5],[2,4],[3,5]]);
     test([[1,5],[2,5],[0,5],[0,4],[0,3]]);
 
     let trials = 5;
@@ -20,6 +21,9 @@ u.scope(__filename, x => {
         console.log(__filename, {vertexCount});
         u.loop(u.range(trials), trial => {
             let graph = index.generateGraph(vertexCount);
+            if (!index.isGraphConnected(graph)) {
+                return;
+            }
             let minned = index.toGraphMinDegree3(graph);
             test(minned);
         })
@@ -27,6 +31,9 @@ u.scope(__filename, x => {
 
     function test(graph) {
         u.merge(x,{graph});
+        if (!index.isGraphConnected(graph)) {
+            return;
+        }
         let vertices = index.getGraphVertices(graph);
         u.merge(x,{vertices});
         let result = index.graphTraverse(graph, 0);
