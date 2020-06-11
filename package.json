@@ -1,15 +1,15 @@
 {
   "name": "wlj-math",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "dependencies": {
+    "biguint-format": "^1.0.2",
     "crypto": "^1.0.1",
-    "wlj-utilities": "^1.0.59",
-    "biguint-format": "^1.0.2"
+    "wlj-utilities": "^1.0.78"
   },
   "devDependencies": {},
   "scripts": {

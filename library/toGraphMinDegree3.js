@@ -18,6 +18,7 @@ function toGraphMinDegree3(graph) {
 
         let vertices = getGraphVertices(graph);
 
+        let edgesToAdd = [];
         u.loop(vertices, a => {
             let an = getGraphNeighbors(graph, a);
             u.loop(an, b => {
@@ -26,7 +27,7 @@ function toGraphMinDegree3(graph) {
                     if (c === a) {
                         return;
                     }
-                    tryAddGraphEdge(graph, a, c);
+                    edgesToAdd.push([a,c]);
                     let cn = getGraphNeighbors(graph, c);
                     u.loop(cn, d => {
                         if (d === a) {
@@ -36,6 +37,10 @@ function toGraphMinDegree3(graph) {
                     });
                 });
             });
+        });
+
+        u.loop(edgesToAdd, e => {
+            graph.push(e);
         });
 
         result = graph;

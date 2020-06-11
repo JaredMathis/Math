@@ -8,6 +8,7 @@ function getGraphVertices(graph) {
     let result;
     u.scope(getGraphVertices.name, x => {
         let log = false;
+        u.merge(x,{graph});
         u.assert(() => isGraph(graph));
 
         let vertices = [];
