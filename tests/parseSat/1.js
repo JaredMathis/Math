@@ -9,6 +9,6 @@ u.scope(__filename, x => {
     1 2 3 0
     4 5 6 0
     `);
-let expected = [[1,2,3],[4,5,6]]
+    let expected = [[1, 2, 3], [4, 5, 6]]
     u.assertIsEqualJson(actual, expected);
 });
