@@ -18,3 +18,14 @@ require("./tests/generateGraph/generateGraph.js");
 
 require("./tests/graphTreeTraverse/graphTreeTraverse.js");
 require("./tests/graphTraverse/graphTraverse.js");
+require("./tests/to4Sat/1.js");
+require("./tests/to4Sat/2.js");
+require("./tests/is3Sat/1.js");
+require("./tests/tryAdd4Clause/1.js");
+require("./tests/tryAdd4Clause/2.js");
+require("./tests/tryAdd4Clause/3.js");
+require("./tests/tryAdd4Clause/4.js");
+require("./tests/tryAdd4Clause/5.js");
+require("./tests/tryAdd4Clause/6.js");
+require("./tests/grow4Sat/1.js");
+require("./tests/solve4Sat/1.js");

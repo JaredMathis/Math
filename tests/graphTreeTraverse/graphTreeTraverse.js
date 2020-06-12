@@ -6,6 +6,9 @@ const generateGraphTree = require("../../library/generateGraphTree.js");
 const getGraphVertices = require("../../library/getGraphVertices.js");
 
 u.scope(__filename, x => {    
+    // This is "commented out" to make the tests run faster.
+    console.log(__filename, 'TODO');
+    return;
     let log = true;
     let fast = true;
     test([[2,3],[0,3],[1,3]]);
