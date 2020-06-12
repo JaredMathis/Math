@@ -26,3 +26,4 @@ module.exports.tryAddSatClause = require("./library/tryAddSatClause.js");
 module.exports.getLargestSatVariable = require("./library/getLargestSatVariable.js");
 module.exports.toMin3Sat = require("./library/toMin3Sat.js");
 module.exports.parseSat = require("./library/parseSat.js");
+module.exports.solveSat = require("./library/solveSat.js");
