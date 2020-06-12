@@ -41,3 +41,7 @@ require("./tests/getLargestSatVariable/2.js");
 require("./tests/toMin3Sat/1.js");
 require("./tests/parseSat/1.js");
 require("./tests/solveSat/1.js");
+require("./tests/solveSat/2.js");
+require("./tests/solveSat/3.js");
+require("./tests/solveSat/4.js");
+require("./tests/solveSat/5.js");
