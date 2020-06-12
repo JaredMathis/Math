@@ -30,3 +30,4 @@ require("./tests/tryAdd4Clause/6.js");
 require("./tests/grow4Sat/1.js");
 require("./tests/get4SatVariables/1.js");
 require("./tests/solve4Sat/1.js");
+require("./tests/solve4Sat/2.js");
