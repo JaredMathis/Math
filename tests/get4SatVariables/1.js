@@ -1,7 +1,7 @@
 
 const u = require("wlj-utilities");
 
-const get4SatVariables = require("../../library/getSatVariables.js");
+const get4SatVariables = require("../../library/get4SatVariables.js");
 const index = require("../../index.js");
 const to4Sat = require("../../library/to4Sat.js");
 

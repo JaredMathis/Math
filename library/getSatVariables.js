@@ -1,14 +1,14 @@
 
 const u = require("wlj-utilities");
 
-module.exports = get4SatVariables;
+module.exports = getSatVariables;
 
-function get4SatVariables(clauses) {
+function getSatVariables(clauses) {
     let result;
-    u.scope(get4SatVariables.name, x => {
+    u.scope(getSatVariables.name, x => {
         result = []
         u.loop(clauses, c => {
-            u.loop([c[0][0], c[0][1], c[1][0], c[1][1]], l => {
+            u.loop(c, l => {
                 let a = Math.abs(l);
                 if (result.includes(a)) {
                     return;

@@ -1,6 +1,6 @@
 
 const u = require("wlj-utilities");
-const tryAdd4Clause = require("./tryAdd4Clause");
+const tryAdd4SatClause = require("./tryAdd4SatClause");
 
 module.exports = to4Sat;
 
@@ -21,8 +21,8 @@ function to4Sat(clauses) {
 }
 
 function d(result, l1, l2, l3, c) {
-    tryAdd4Clause(result, a(c[l1 - 1], c[l2 - 1], c[l3 - 1]));
-    tryAdd4Clause(result, b(c[l1 - 1], c[l2 - 1], c[l3 - 1]));
+    tryAdd4SatClause(result, a(c[l1 - 1], c[l2 - 1], c[l3 - 1]));
+    tryAdd4SatClause(result, b(c[l1 - 1], c[l2 - 1], c[l3 - 1]));
 }
 
 /**

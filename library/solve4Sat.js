@@ -2,7 +2,7 @@
 const u = require("wlj-utilities");
 const is3Sat = require("./is3Sat");
 const to4Sat = require("./to4Sat");
-const get4SatVariables = require("./getSatVariables");
+const get4SatVariables = require("./get4SatVariables");
 
 module.exports = solve4Sat;
 

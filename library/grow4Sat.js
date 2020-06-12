@@ -1,6 +1,6 @@
 
 const u = require("wlj-utilities");
-const tryAdd4Clause = require("./tryAdd4Clause");
+const tryAdd4SatClause = require("./tryAdd4SatClause");
 
 module.exports = grow4Sat;
 
@@ -17,10 +17,10 @@ function grow4Sat(sat4) {
                 if (log) console.log({ i, j, c, d });
                 if (u.arraySequenceEquals(c[1], d[0])) {
                     let newClause = [c[0], d[1]];
-                    tryAdd4Clause(sat4, newClause)
+                    tryAdd4SatClause(sat4, newClause)
                 } else if (u.arraySequenceEquals(d[1], c[0])) {
                     let newClause = [d[0], c[1]];
-                    tryAdd4Clause(sat4, newClause)
+                    tryAdd4SatClause(sat4, newClause)
                 }
                 j++;
             }
