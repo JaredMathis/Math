@@ -16,7 +16,6 @@ require("./tests/generateGraph/generateGraph.js");
 // TODO: Fix the test
 //require("./tests/toRegular3Graph/toRegular3Graph.js");
 
-require("./tests/graphTreeTraverse/graphTreeTraverse.js");
 require("./tests/graphTraverse/graphTraverse.js");
 require("./tests/to4Sat/1.js");
 require("./tests/to4Sat/2.js");
@@ -28,8 +27,6 @@ require("./tests/tryAdd4SatClause/4.js");
 require("./tests/tryAdd4SatClause/5.js");
 require("./tests/grow4Sat/1.js");
 require("./tests/get4SatVariables/1.js");
-require("./tests/solve4Sat/1.js");
-require("./tests/solve4Sat/2.js");
 require("./tests/toMax3Sat/1.js");
 require("./tests/tryAddSatClause/1.js");
 require("./tests/tryAddSatClause/2.js");
@@ -40,8 +37,3 @@ require("./tests/getLargestSatVariable/1.js");
 require("./tests/getLargestSatVariable/2.js");
 require("./tests/toMin3Sat/1.js");
 require("./tests/parseSat/1.js");
-require("./tests/solveSat/1.js");
-require("./tests/solveSat/2.js");
-require("./tests/solveSat/3.js");
-require("./tests/solveSat/4.js");
-require("./tests/solveSat/5.js");
