@@ -20,3 +20,4 @@ module.exports.solve4Sat = require("./library/solve4Sat.js");
 module.exports.is3Sat = require("./library/is3Sat.js");
 module.exports.grow4Sat = require("./library/grow4Sat.js");
 module.exports.tryAdd4Clause = require("./library/tryAdd4Clause.js");
+module.exports.get4SatVariables = require("./library/get4SatVariables.js");
