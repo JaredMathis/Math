@@ -1,0 +1,5 @@
+Run unit tests:
+ node test
+
+Run all tests (including longer tests)
+ node long
