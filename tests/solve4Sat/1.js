@@ -25,4 +25,7 @@ u.scope(__filename, x => {
     grow4Sat(sat4);
     u.merge(x, () => sat4.length)
     u.assert(() => sat4.length === 576);
+
+    let satisfied = solve4Sat(sat4);
+    u.assert(() => !satisfied);
 });
