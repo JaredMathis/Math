@@ -37,3 +37,4 @@ require("./tests/getLargestSatVariable/1.js");
 require("./tests/getLargestSatVariable/2.js");
 require("./tests/toMin3Sat/1.js");
 require("./tests/parseSat/1.js");
+require("./tests/generateGraphMax3/1.js");
